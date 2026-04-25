@@ -53,13 +53,18 @@ test.describe('SauceDemo — core user flows', () => {
     await page.getByRole('button', { name: 'Finish' }).click();
     await expect(page.locator('.complete-header')).toContainText('Thank you for your order');
   });
-  
+
   test('API: list users returns expected schema', async ({ request }) => {
-  const response = await request.get('https://reqres.in/api/users?page=1');
+  const response = await request.get('https://jsonplaceholder.typicode.com/users');
   expect(response.ok()).toBeTruthy();
   const body = await response.json();
-  expect(body.data.length).toBeGreaterThan(0);
-  expect(body.data[0]).toHaveProperty('email');
+  expect(body.length).toBeGreaterThan(0);
+  expect(body[0]).toHaveProperty('email');
+  expect(body[0]).toHaveProperty('name');
+});
+  test('login page visual snapshot', async ({ page }) => {
+  await page.goto('/');
+  await expect(page).toHaveScreenshot('login-page.png');
 });
 
 });
