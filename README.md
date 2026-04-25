@@ -1,6 +1,6 @@
 # Playwright E2E Test Suite — SauceDemo
 
-![CI](https://github.com/ialwahaibi/playwright-saucedemo/actions/workflows/playwright.yml/badge.svg)
+[![CI](https://github.com/ialwahaibi/playwright-saucedemo/actions/workflows/playwright.yml/badge.svg)](https://github.com/ialwahaibi/playwright-saucedemo/actions/workflows/playwright.yml)
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=ialwahaibi_playwright-saucedemo)](https://sonarcloud.io/summary/new_code?id=ialwahaibi_playwright-saucedemo)
 
 End-to-end test automation for the SauceDemo storefront, built with Playwright

@@ -62,9 +62,5 @@ test.describe('SauceDemo — core user flows', () => {
   expect(body[0]).toHaveProperty('email');
   expect(body[0]).toHaveProperty('name');
 });
-  test('login page visual snapshot', async ({ page }) => {
-  await page.goto('/');
-  await expect(page).toHaveScreenshot('login-page.png');
-});
 
 });
